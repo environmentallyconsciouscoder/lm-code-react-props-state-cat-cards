@@ -13,7 +13,7 @@ const Card : React.FC<Data> = (props) =>
             <h3 className="card__text card__header">{name}</h3>
             <p className="card__text">Species: {species}</p>
             <p className="card__text">Favourite Food(s):</p>
-            {favFoods.map((food, i) => <p className="card__text">{i < favFoods.length - 1? food + "," : food}</p> )}
+            {favFoods.map((food, i) => <p className="card__text" key={i}>{i < favFoods.length - 1? food + "," : food}</p> )}
             <p className="card__text">Birth Year: {birthYear}</p>
             {index !== undefined && index < images.length && (
 				<CatImage
